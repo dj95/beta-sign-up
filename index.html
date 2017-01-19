@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        
+        <title>ETdb</title>
+
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+
+    <body id="page-top" class="index">
+        <!-- Navigation -->
+        <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top background-container">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header page-scroll">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                    </button>
+                    <a class="navbar-brand page-scroll" href="#page-top">ETdb</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="hidden">
+                            <a href="#page-top"></a>
+                        </li>
+                        <li>
+                            <a class="" href="https://github.com/etdb-dev">Github</a>
+                        </li>
+                        <li>
+                            <a href="#portfolioModal1" class="portfolio-link btn btn-primary" data-toggle="modal">Participate</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+
+        <!-- Header -->
+        <header>
+            <div class="container background-container">
+                <div class="row">
+                    <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-lg-8 col-lg-offset-2">
+                        <div class="intro-text">
+                            <div class="intro-lead-in">ETdb</div>
+                                <p class="item-intro text-muted">Spotting the home phoning martians in your app store.</p>
+                                <!--
+                                <img class="img-responsive img-centered" src="assets/img/etdb.png" alt="">
+                                -->
+                                <p>We set the goal for our ETdb API to create a database which contains information about most of the popular apps and which APIs they call.
+                                We are going to start a beta test later in Q3 2017 when the main development is done. In order to participate in the closed beta program, please leave a subscription.</p>
+                                <p>If you want to get more information what we run or if you want to take a part in the development feel free to check out the <a href="https://github.com/etdb-dev/api-server">Github-Repository</a>.</p>
+                                <br>
+                                <a href="#portfolioModal1" class="page-scroll btn btn-xl portfolie-link" data-toggle="modal">Participate</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- About page -->
+        <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-dismiss="modal" style="color: #fff">
+                        <div class="lr">
+                            <div class="rl">
+                            </div>
+                        </div>
+                    </div>
+                    <header>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-lg-8 col-lg-offset-2">
+                                <div class="modal-body" style="color: #fff">
+                                    <div class="intro-text">
+                                        <div class="intro-lead-in">Subscribe the closed beta!</div>
+                                        <form>
+                                            <input type="text" class="textinput" id="mail" placeholder="mail@domain.tld"><br>
+                                            <button class="btn btn-xl" id="subscribe">Catch the wave!</button>
+                                        </form>
+
+                                        <script>
+                                            document.getElementById("subscribe").addEventListener('click', function(event) {
+                                                event.preventDefault();
+                                                var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                                                var d = document.getElementById('mail').value;
+                                                if (re.test(d)) {
+                                                    var xhr = new XMLHttpRequest();
+                                                    xhr.open('GET', 'http://localhost:3000?mail=' + d);
+                                                    xhr.send();
+                                                } else {
+                                                    alert('Please enter a valid mail address')
+                                                }
+
+                                            });
+                                        </script>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </header>
+                </div>
+            </div>
+        </div>
+
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="js/agency.min.js"></script>
+    </body>
+</html>

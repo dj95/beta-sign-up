@@ -1,0 +1,26 @@
+{
+  "name": "etdb-subscribe",
+  "version": "0.0.1",
+  "description": "E.T. DB - Spotting the marsians in your app store. Subscribe page",
+  "author": "Daniel Jankowski <https://github.com/dj95/>",
+    "contributors": [
+    "Daniel Jankowski (https://github.com/dj95/)",
+    "Raphael Beer <raphael.beer@protonmail.com> (https://github.com/rbeer/)"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.14.0",
+    "express-promise-router": "^1.1.1"
+  },
+  "devDependencies": {
+  },
+  "engines": {
+    "node": ">=6.9.1",
+    "npm": ">=3.10.8"
+  },
+  "main": "api.js",
+  "scripts": {
+    "start": "node ./api.js"
+  }
+}
+
