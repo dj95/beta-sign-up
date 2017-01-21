@@ -23,8 +23,13 @@ body.modal-open .background-container{
   filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='4');
 }
 
+.row-spaced {
+  margin-bottom: 25px;
+}
+
 .text-muted {
-  color: #777777; }
+  color: #777777;
+  }
 
 .text-primary {
   color: #03a9f4; }
