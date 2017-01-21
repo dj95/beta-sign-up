@@ -1,0 +1,87 @@
+/*!
+ * ETdb  -  v0.0.1 ()
+ * Copyright 2016-2017 Daniel Jankowski <https://github.com/dj95/>
+ * Licensed under  ()
+ */
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,700);
+flip-button {
+  display: block;
+  position: relative;
+  width: 200px;
+  height: 80px;
+  transition: width 0.8s cubic-bezier(0.23, 1, 0.32, 1), height 0.8s cubic-bezier(0.23, 1, 0.32, 1), transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform-style: preserve-3d;
+  transform-origin: 50% 50%;
+  text-align: center;
+  /* .btn-front */
+  /* .btn-back */ }
+  flip-button [data-open="true"] {
+    width: 400px;
+    height: 160px; }
+    flip-button [data-open="true"] front {
+      pointer-events: none;
+      line-height: 160px; }
+    flip-button [data-open="true"] back {
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4); }
+    flip-button [data-open="true"] [data-direction="top"] {
+      transform: rotateX(180deg); }
+    flip-button [data-open="true"] [data-direction="right"] {
+      transform: rotateY(180deg); }
+    flip-button [data-open="true"] [data-direction="bottom"] {
+      transform: rotateX(-180deg); }
+    flip-button [data-open="true"] [data-direction="left"] {
+      transform: rotateY(-180deg); }
+  flip-button [data-direction="left"] back,
+  flip-button [data-direction="right"] back {
+    transform: translateZ(-2px) rotateY(180deg); }
+  flip-button front {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 80px;
+    background-color: #F44336;
+    color: #fff;
+    cursor: pointer;
+    backface-visibility: hidden;
+    -webkit-tap-highlight-color: transparent;
+    transition: background 0.15s ease, line-height 0.8s cubic-bezier(0.23, 1, 0.32, 1); }
+  flip-button front:hover {
+    background-color: #f77066; }
+  flip-button back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #eee;
+    color: #222;
+    transform: translateZ(-2px) rotateX(180deg);
+    overflow: hidden;
+    transition: box-shadow 0.8s ease; }
+    flip-button back p {
+      margin-top: 27px;
+      margin-bottom: 25px; }
+    flip-button back button {
+      padding: 12px 20px;
+      width: 30%;
+      margin: 0 5px;
+      background-color: transparent;
+      border: 0;
+      border-radius: 2px;
+      font-size: 1em;
+      cursor: pointer;
+      -webkit-appearance: none;
+      -webkit-tap-highlight-color: transparent;
+      transition: background 0.15s ease; }
+      flip-button back button:focus {
+        outline: 0; }
+      flip-button back button.yes {
+        background-color: #2196F3;
+        color: #fff; }
+        flip-button back button.yes:hover {
+          background-color: #51adf6; }
+      flip-button back button.no {
+        color: #2196F3; }
+        flip-button back button.no:hover {
+          background-color: #ddd; }
+
+/*# sourceMappingURL=../maps/flip-button.css.map */
