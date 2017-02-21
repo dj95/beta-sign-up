@@ -11,6 +11,10 @@
 
         <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
         <link href="styles/dist/style.min.css" rel="stylesheet">
+
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <link href="vendor/onepagescroll/onepage-scroll.css" rel="stylesheet">
+        <script src="vendor/onepagescroll/jquery.onepage-scroll.js"></script>
     </head>
 
     <body id="page-top" class="index">
@@ -45,26 +49,112 @@
         </nav>
 
         <!-- Header -->
-        <header>
-            <div class="container background-container">
-                <div class="row">
-                    <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-lg-8 col-lg-offset-2">
-                        <div class="intro-text">
-                            <div class="intro-lead-in">ETdb</div>
+        <div class="main">
+            <section>
+                <header>
+                    <div class="container background-container">
+                        <div class="row">
+                            <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-lg-8 col-lg-offset-2">
+                                <div class="intro-text">
+                                    <div class="intro-lead-in">ETdb</div>
                                 <p class="item-intro text-muted">Spotting the home phoning martians in your app store.</p>
-                                <!--
-                                <img class="img-responsive img-centered" src="assets/img/etdb.png" alt="">
-                                -->
-                                <p>We set the goal for our ETdb API to create a database which contains information about most of the popular apps and which APIs they call.
-                                We are going to start a beta test later in Q3 2017 when the main development is done. In order to participate in the closed beta program, please leave a subscription.</p>
-                                <p>If you want to get more information what we run or if you want to take a part in the development feel free to check out the <a href="https://github.com/etdb-dev/api-server">Github-Repository</a>.</p>
-                                <br>
-                                <a href="#portfolioModal1" class="page-scroll btn btn-xl portfolie-link" data-toggle="modal">Participate</a>
+                                    <!--
+                                    <img class="img-responsive img-centered" src="assets/img/etdb.png" alt="">
+                                    -->
+                                    <p>We set the goal for our ETdb API to create a database which contains information about most of the popular apps and which APIs they call.
+                                    We are going to start a beta test later in Q3 2017 when the main development is done. In order to participate in the closed beta program, please leave a subscription.</p>
+                                    <p>If you want to get more information what we run or if you want to take a part in the development feel free to check out the <a href="https://github.com/etdb-dev/api-server">Github-Repository</a>.</p>
+                                    <br>
+                                    <a href="#portfolioModal1" class="page-scroll btn btn-xl portfolie-link" data-toggle="modal">Participate</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+            </section>
+            <section>
+                <div class="content">
+                    <div class="container background-container">
+                        <center><h3 class="title">Software</h3></center>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="card">
+                                    <h3 class="card-title">API-Server</h3>
+                                    <div class="card-body">
+                                        The API-Server is the heart of our project. It serves the database and the API which offers information about apps and features an interface to extend the database.
+                                        <ul>
+                                            <li><b>Language</b> NodeJS</li>
+                                            <li><b>Database</b> MongoDB</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="card">
+                                    <h3 class="card-title">API-Client</h3>
+                                    <div class="card-body">
+                                        The API-Client is your chance to work with our API. It offers the possibility to test the apps of your choice and publish the data in our database.
+                                        <ul>
+                                            <li><b>Language</b> Python</li>
+                                            <li>&nbsp;</li>
+                                            <li><b><center>Coming Soon</center></b></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="card">
+                                    <h3 class="card-title">Frontend</h3>
+                                    <div class="card-body">
+                                        The frontend is integrated into a website, so that you are able to search throught the database when ever you want, wherever you are.
+                                        <ul>
+                                            <li><b>Language</b> HTML</li>
+                                            <li><b>Scripting</b> JavaScript</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </header>
+            </section>
+            <section>
+                <div class="content">
+                    <div class="container background-container">
+                        <center><h3 class="title">TEAM</h3></center>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="card card-team">
+                                    <h3 class="card-title">@rbeer</h3>
+                                    <div class="card-body">
+                                        <center>
+                                            <ul>
+                                                <li><b>Github</b> <a href="https://github.com/rbeer">github.com/rbeer</a></li>
+                                            </ul>
+                                        </center>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="card card-team">
+                                    <h3 class="card-title">@neotrace</h3>
+                                    <div class="card-body">
+                                        <center>
+                                            <ul>
+                                                <li><b>Github</b> <a href="https://github.com/rbeer">github.com/dj95</a></li>
+                                                <li><b>Telegram</b> <a href="https://telegram.me/neotrace">@neotrace</a></li>
+                                                <li><b>Slack</b> <a href="https://etdb-dev.slack.com">@neotrace in etdb-dev</a></li>
+                                            </ul>
+                                        </center>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
 
         <!-- About page -->
         <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
@@ -114,7 +204,7 @@
         </div>
 
     <!-- jQuery -->
-    <script src="vendor/jquery/jquery.min.js"></script>
+    <!-- <script src="vendor/jquery/jquery.min.js"></script> -->
 
     <!-- Bootstrap Core JavaScript -->
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
@@ -128,5 +218,23 @@
 
     <!-- Theme JavaScript -->
     <script src="js/agency.min.js"></script>
+    <script>
+$(".main").onepage_scroll({
+   sectionContainer: "section",     // sectionContainer accepts any kind of selector in case you don't want to use section
+   easing: "ease",                  // Easing options accepts the CSS3 easing animation such "ease", "linear", "ease-in",
+                                    // "ease-out", "ease-in-out", or even cubic bezier value such as "cubic-bezier(0.175, 0.885, 0.420, 1.310)"
+   animationTime: 1000,             // AnimationTime let you define how long each section takes to animate
+   pagination: true,                // You can either show or hide the pagination. Toggle true for show, false for hide.
+   updateURL: false,                // Toggle this true if you want the URL to be updated automatically when the user scroll to each page.
+   beforeMove: function(index) {},  // This option accepts a callback function. The function will be called before the page moves.
+   afterMove: function(index) {},   // This option accepts a callback function. The function will be called after the page moves.
+   loop: false,                     // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
+   keyboard: true,                  // You can activate the keyboard controls
+   responsiveFallback: 767,        // You can fallback to normal page scroll by defining the width of the browser in which
+                                    // you want the responsive fallback to be triggered. For example, set this to 600 and whenever
+                                    // the browser's width is less than 600, the fallback will kick in.
+   direction: "vertical"            // You can now define the direction of the One Page Scroll animation. Options available are "vertical" and "horizontal". The default value is "vertical".  
+});
+    </script>
     </body>
 </html>
