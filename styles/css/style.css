@@ -9,7 +9,7 @@ html {
 body {
   overflow-x: hidden;
   font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background: linear-gradient(#dedede, #dedede,#dedede, #dedede, #dedede, #dedede, #dedede,#000000);
+  background: linear-gradient(#dedede, #dedede,#dedede, #dedede, #dedede, #dedede, #dedede, #97a8bf);
   /*text-shadow: 0.6px 0.6px 1px rgba(0, 0, 0, 0.6);*/
   min-height: 100%;}
 
@@ -26,6 +26,10 @@ body.modal-open .background-container{
 .content {
     margin-left: 50px;
     margin-right: 50px;
+}
+
+.github {
+    color: #333;
 }
 
 .title {
@@ -57,7 +61,7 @@ body.modal-open .background-container{
 }
 
 .card-body ul li b { 
-    color: #848484;
+    color: #5e86bf;
     font-weight: normal;
 }
 
@@ -69,7 +73,7 @@ body.modal-open .background-container{
 
 .text-muted {
   /*text-shadow: 0.6px 0.6px 1px rgba(0, 0, 0, 0.6);*/
-  color: #adadad; }
+  color: #5e86bf; }
 
 .text-primary {
   color: #03a9f4; }
@@ -95,7 +99,7 @@ a:hover,
 a:focus,
 a:active,
 a.active {
-  color: #000; }
+  color: #5e86bf; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -112,9 +116,9 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #222222; }
 
 .btn-primary {
-  color: #777;
+  color: #5e86bf!important;
   background-color: rgba(0,0,0,0);
-  border-color: #777;
+  border-color: #5e86bf;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 700; }
@@ -123,21 +127,22 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #0286c2;
     border-color: #777; }
   .btn-primary:hover {
-    color: #222!important;
+    color: #5e86bf!important;
     background-color: #0286c2;
-    border-color: #777; }
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    border-color: #5e86bf; }
   .btn-primary:active, .btn-primary.active,
   .open > .btn-primary.dropdown-toggle {
-    color: #222!important;
+    color: #5e86bf!important;
     background-color: rgba(0,0,0,0);
-    border-color: #777; }
+    border-color: #5e86bf; }
     .btn-primary:active:hover, .btn-primary:active:focus, .btn-primary:active.focus, .btn-primary.active:hover, .btn-primary.active:focus, .btn-primary.active.focus,
     .open > .btn-primary.dropdown-toggle:hover,
     .open > .btn-primary.dropdown-toggle:focus,
     .open > .btn-primary.dropdown-toggle.focus {
-      color: #222 !important;
+      color: #5e86bf !important;
       background-color: rgba(0,0,0,0);
-      border-color: #777; }
+      border-color: #5e86bf; }
   .btn-primary:active, .btn-primary.active,
   .open > .btn-primary.dropdown-toggle {
     background-image: none; }
@@ -156,12 +161,16 @@ h1, h2, h3, h4, h5, h6 {
     border-bottom: solid 3px #777;
     font-size: 15px;
     text-align: center;
-    color: #777;
+    color: #333;
     background: none;
     margin-top: 16px;
     margin-bottom: 16px;
     width: 100%;
     outline: none;
+}
+
+.textinput:active, .textinput:focus {
+    border-color: #5e86bf;
 }
 
 @media (min-width: 1200px) {
@@ -188,12 +197,12 @@ h1, h2, h3, h4, h5, h6 {
   padding: 20px 40px; }
   .btn-xl:focus, .btn-xl.focus {
     color: #222;
-    background-color: #dedede;
+    background-color: rgba(0,0,0,0);
     border-color: #777; }
   .btn-xl:hover {
-    color: #333;
-    background-color: #dedede;
-    border-color: #777; }
+    color: #5e86bf;
+    background-color: rgba(0,0,0,0);
+    border-color: #5e86bf; }
   .btn-xl:active, .btn-xl.active,
   .open > .btn-xl.dropdown-toggle {
     color: white;
@@ -226,7 +235,7 @@ h1, h2, h3, h4, h5, h6 {
     color: #777;
     font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive; }
     .navbar-custom .navbar-brand:hover, .navbar-custom .navbar-brand:focus, .navbar-custom .navbar-brand:active, .navbar-custom .navbar-brand.active {
-      color: #222; }
+      color: #5e86bf; }
   .navbar-custom .navbar-collapse {
     border-color: rgba(255, 255, 255, 0.98); }
   .navbar-custom .navbar-toggle {
@@ -245,7 +254,7 @@ h1, h2, h3, h4, h5, h6 {
     letter-spacing: 1px;
     color: #777; }
     .navbar-custom .nav li a:hover, .navbar-custom .nav li a:focus {
-      color: #222;
+      color: #5e86bf;
       outline: none; }
   .navbar-custom .navbar-nav > .active > a {
     border-radius: 0;
