@@ -15,6 +15,7 @@
         <script src="vendor/jquery/jquery.min.js"></script>
         <link href="vendor/onepagescroll/onepage-scroll.css" rel="stylesheet">
         <script src="vendor/onepagescroll/jquery.onepage-scroll.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/0.4.0/trianglify.min.js"></script>
     </head>
 
     <body id="page-top" class="index">
@@ -50,10 +51,10 @@
 
         <!-- Header -->
         <div class="main">
-            <section style="background: linear-gradient(#dedede, #dedede,#dedede, #dedede, #dedede, #dedede, #dedede, #97a8bf);">
+            <section>
                 <header>
                     <div class="container background-container">
-                        <div class="row">
+                        <div class="row white">
                             <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-lg-8 col-lg-offset-2">
                                 <div class="intro-text">
                                     <div class="intro-lead-in">ETdb</div>
@@ -79,9 +80,9 @@
                     </div>
                 </header>
             </section>
-            <section style="background: #97a8bf;">
+            <section>
                 <div class="content">
-                    <div class="container background-container">
+                    <div class="container background-container white">
                         <center><h3 class="title">Software</h3></center>
                         <div class="row">
                             <div class="col-sm-4">
@@ -125,9 +126,9 @@
                     </div>
                 </div>
             </section>
-            <section style="background: linear-gradient(#97a8bf,#dedede, #dedede, #dedede, #dedede, #dedede, #dedede);">
+            <section>
                 <div class="content">
-                    <div class="container background-container">
+                    <div class="container background-container white">
                         <center><h3 class="title">TEAM</h3></center>
                         <div class="row">
                             <div class="col-sm-6">
@@ -161,9 +162,9 @@
                     </div>
                 </div>
             </section>
-            <section style="background: linear-gradient(#dedede,#dedede, #dedede, #dedede, #dedede, #dedede, #97a8bf);">
+            <section>
                 <div class="content">
-                    <div class="container background-container">
+                    <div class="container background-container white">
                         <center><h3 class="title">ABOUT</h3></center>
                         <div class="row">
                             <div class="col-sm-4"></div>
@@ -249,22 +250,37 @@
     <!-- Theme JavaScript -->
     <script src="js/agency.min.js"></script>
     <script>
-$(".main").onepage_scroll({
-   sectionContainer: "section",     // sectionContainer accepts any kind of selector in case you don't want to use section
-   easing: "ease",                  // Easing options accepts the CSS3 easing animation such "ease", "linear", "ease-in",
-                                    // "ease-out", "ease-in-out", or even cubic bezier value such as "cubic-bezier(0.175, 0.885, 0.420, 1.310)"
-   animationTime: 1000,             // AnimationTime let you define how long each section takes to animate
-   pagination: true,                // You can either show or hide the pagination. Toggle true for show, false for hide.
-   updateURL: false,                // Toggle this true if you want the URL to be updated automatically when the user scroll to each page.
-   beforeMove: function(index) {},  // This option accepts a callback function. The function will be called before the page moves.
-   afterMove: function(index) {},   // This option accepts a callback function. The function will be called after the page moves.
-   loop: false,                     // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
-   keyboard: true,                  // You can activate the keyboard controls
-   responsiveFallback: 767,        // You can fallback to normal page scroll by defining the width of the browser in which
-                                    // you want the responsive fallback to be triggered. For example, set this to 600 and whenever
-                                    // the browser's width is less than 600, the fallback will kick in.
-   direction: "vertical"            // You can now define the direction of the One Page Scroll animation. Options available are "vertical" and "horizontal". The default value is "vertical".  
-});
+        $(".main").onepage_scroll({
+           sectionContainer: "section",     // sectionContainer accepts any kind of selector in case you don't want to use section
+           easing: "ease",                  // Easing options accepts the CSS3 easing animation such "ease", "linear", "ease-in",
+                                            // "ease-out", "ease-in-out", or even cubic bezier value such as "cubic-bezier(0.175, 0.885, 0.420, 1.310)"
+           animationTime: 1000,             // AnimationTime let you define how long each section takes to animate
+           pagination: true,                // You can either show or hide the pagination. Toggle true for show, false for hide.
+           updateURL: false,                // Toggle this true if you want the URL to be updated automatically when the user scroll to each page.
+           beforeMove: function(index) {},  // This option accepts a callback function. The function will be called before the page moves.
+           afterMove: function(index) {},   // This option accepts a callback function. The function will be called after the page moves.
+           loop: false,                     // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
+           keyboard: true,                  // You can activate the keyboard controls
+           responsiveFallback: 767,        // You can fallback to normal page scroll by defining the width of the browser in which
+                                            // you want the responsive fallback to be triggered. For example, set this to 600 and whenever
+                                            // the browser's width is less than 600, the fallback will kick in.
+           direction: "vertical"            // You can now define the direction of the One Page Scroll animation. Options available are "vertical" and "horizontal". The default value is "vertical".  
+        });
+        var pattern = Trianglify({
+            variance: 0.8,
+            cell_size: 30,
+            seed: 'x9ovy',
+            width: window.innerWidth,
+            height: window.innerHeight,
+            x_colors: ['#dedede', '#dedede'],
+            y_colors: ['#EA6A2A', '#dedede', '#dedede', '#dedede', '#dedede', '#dedede', '#dedede', '#dedede', '#dedede', '#dedede', '#97a8bf', '#337ab7'],
+        });
+
+        var canvas = pattern.canvas();
+        var data = canvas.toDataURL();
+        var myElement = document.body;
+
+        myElement.style.backgroundImage = 'url('+data+')';
     </script>
     </body>
 </html>

@@ -9,7 +9,7 @@ html {
 body {
   overflow-x: hidden;
   font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background-color: #dedede;
+  background: #dedede;
   /*background: linear-gradient(#dedede, #dedede,#dedede, #dedede, #dedede, #dedede, #dedede, #97a8bf);*/
   /*text-shadow: 0.6px 0.6px 1px rgba(0, 0, 0, 0.6);*/
   min-height: 100%;}
@@ -38,6 +38,14 @@ body.modal-open .background-container{
     color: #848484;
     margin-bottom: 50px;
 }
+
+.white {
+    /*background-color: rgba(255, 255, 255, 0.3);
+    padding-left: 38px;
+    padding-right: 38px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+*/
+    }
 
 .card {
     margin: 5px 5px 5px 5px;
