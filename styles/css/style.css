@@ -9,7 +9,8 @@ html {
 body {
   overflow-x: hidden;
   font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background: linear-gradient(#dedede, #dedede,#dedede, #dedede, #dedede, #dedede, #dedede, #97a8bf);
+  background-color: #dedede;
+  /*background: linear-gradient(#dedede, #dedede,#dedede, #dedede, #dedede, #dedede, #dedede, #97a8bf);*/
   /*text-shadow: 0.6px 0.6px 1px rgba(0, 0, 0, 0.6);*/
   min-height: 100%;}
 
