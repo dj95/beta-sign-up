@@ -70,6 +70,9 @@
                                         <a href="#portfolioModal1" class="page-scroll btn btn-xl portfolie-link row-spaced" data-toggle="modal">Participate</a>
                                         <p class="col-sm-5 text-right pull-right" style="">If you want to get more information what we run or if you want to take a part in the development feel free to check out the <a href="https://github.com/etdb-dev/api-server" class="github">Github-Repository</a>.</p><br>
                                     </div>
+                                    <br>
+                                    Learn more about us: <br>
+                                    <a class="github" onclick="$.fn.moveTo('2')" href="#">Software</a> - <a class="github">Team</a> - <a class="github">About</a>
                                 </div>
                             </div>
                         </div>
@@ -87,8 +90,8 @@
                                     <div class="card-body">
                                         The API-Server is the heart of our project. It serves the database and the API which offers information about apps and features an interface to extend the database.
                                         <ul>
-                                            <li><b>Language</b> NodeJS</li>
-                                            <li><b>Database</b> MongoDB</li>
+                                            <li><i>Language</i> NodeJS</li>
+                                            <li><i>Database</i> MongoDB</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -99,9 +102,9 @@
                                     <div class="card-body">
                                         The API-Client is your chance to work with our API. It offers the possibility to test the apps of your choice and publish the results in our database.
                                         <ul>
-                                            <li><b>Language</b> Python</li>
+                                            <li><i>Language</i> Python</li>
                                             <li>&nbsp;</li>
-                                            <li><b><center>Coming Soon</center></b></li>
+                                            <li><i><center>Coming Soon</center></i></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -112,8 +115,8 @@
                                     <div class="card-body">
                                         The frontend is integrated into a website, so you are able to search through the database whenever you want, wherever you are.
                                         <ul>
-                                            <li><b>Language</b> HTML</li>
-                                            <li><b>Scripting</b> JavaScript</li>
+                                            <li><i>Language</i> HTML</li>
+                                            <li><i>Scripting</i> JavaScript</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -133,7 +136,7 @@
                                     <div class="card-body">
                                         <center>
                                             <ul>
-                                                <li><b>Github</b> <a href="https://github.com/rbeer">github.com/rbeer</a></li>
+                                                <li><i>Github</i> <a href="https://github.com/rbeer">github.com/rbeer</a></li>
                                             </ul>
                                         </center>
                                     </div>
@@ -146,13 +149,36 @@
                                     <div class="card-body">
                                         <center>
                                             <ul>
-                                                <li><b>Github</b> <a href="https://github.com/rbeer">github.com/dj95</a></li>
-                                                <li><b>Telegram</b> <a href="https://telegram.me/neotrace">@neotrace</a></li>
-                                                <li><b>Slack</b> <a href="https://etdb-dev.slack.com">@neotrace in etdb-dev</a></li>
+                                                <li><i>Github</i> <a href="https://github.com/rbeer">github.com/dj95</a></li>
+                                                <li><i>Telegram</i> <a href="https://telegram.me/neotrace">@neotrace</a></li>
+                                                <li><i>Slack</i> <a href="https://etdb-dev.slack.com">@neotrace in etdb-dev</a></li>
                                             </ul>
                                         </center>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="content">
+                    <div class="container background-container">
+                        <center><h3 class="title">ABOUT</h3></center>
+                        <div class="row">
+                            <div class="col-sm-4"></div>
+                            <div class="col-sm-4">
+                                <p>
+                                This website is based on the following projects:
+                                <ul>
+                                    <li><a class="github" href=".">jQuery</a></li>
+                                    <li><a class="github" href=".">Bootstrap</a></li>
+                                    <li><a class="github" href=".">Agency-Bootstrap Template</a></li>
+                                    <li><a class="github" href=".">onepagescroll.js</a></li>
+                                </ul>
+                                The remaining parts are licensed under the [LICENSE].<br><br>
+                                © 2017 - ETdb
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -189,7 +215,7 @@
                                                 var d = document.getElementById('mail').value;
                                                 if (re.test(d)) {
                                                     var xhr = new XMLHttpRequest();
-                                                    xhr.open('GET', 'http://localhost:3000?mail=' + d);
+                                                    xhr.open('GET', 'http://beta.etdb.de:5000?mail=' + d);
                                                     xhr.send();
                                                 } else {
                                                     alert('Please enter a valid mail address')
