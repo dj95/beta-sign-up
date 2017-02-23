@@ -249,7 +249,8 @@
 
     <!-- Theme JavaScript -->
     <script src="js/agency.min.js"></script>
-    <script src="js/fancy_background.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/0.4.0/trianglify.min.js"></script>
+
     <script>
 $(".main").onepage_scroll({
    sectionContainer: "section",     // sectionContainer accepts any kind of selector in case you don't want to use section
@@ -267,6 +268,20 @@ $(".main").onepage_scroll({
                                     // the browser's width is less than 600, the fallback will kick in.
    direction: "vertical"            // You can now define the direction of the One Page Scroll animation. Options available are "vertical" and "horizontal". The default value is "vertical".  
 });
+        var pattern = Trianglify({
+            variance: 0.8,
+            cell_size: 30,
+            seed: 'x9ovy',
+            width: window.innerWidth,
+            height: window.innerHeight,
+            x_colors: ['#dedede', '#dedede'],
+            y_colors: ['#EA6A2A', '#dedede', '#dedede', '#dedede', '#dedede', '#dedede', '#dedede', '#dedede', '#dedede', '#dedede', '#97a8bf', '#337ab7'],
+        });
+        var canvas = pattern.canvas();
+        var data = canvas.toDataURL();
+        var myElement = document.body;
+        myElement.style.backgroundImage = 'url('+data+')';
     </script>
+    <script src="js/fancy_background.js"></script>
     </body>
 </html>

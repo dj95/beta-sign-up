@@ -63,7 +63,7 @@ var init = function() {
     // fragment shader source code
     var fragCode =
        'void main(void) {' +
-          ' gl_FragColor = vec4(0.0, 0.0, 0.0, 0.05);' +
+          ' gl_FragColor = vec4(0.0, 0.0, 0.0, 0.03);' +
        '}';
     
     // Create fragment shader object
@@ -121,13 +121,13 @@ var resize = function(gl) {
 var render = function(gl) {
     resize(gc);
     
-    gc.clear(gc.COLOR_BUFFER_BIT);
+    //gc.clear(gc.COLOR_BUFFER_BIT);
 
     for (var i=0; i < vertices.length; i++) {
         if (counter >= 300) {
             console.log('new value');
             for (var i=0; i < vertices.length; i++) {
-                a[i] = Math.random() * (0.001 + 0.001) - 0.001;
+                a[i] = Math.random() * (0.0005 + 0.0005) - 0.0005;
             }
             counter = 0;
         }
@@ -147,7 +147,7 @@ var render = function(gl) {
     gc.enable(gc.DEPTH_TEST);
 
     // Clear the color buffer bit
-    gc.clear(gc.COLOR_BUFFER_BIT);
+    //gc.clear(gc.COLOR_BUFFER_BIT);
 
     // Set the view port
     gc.viewport(0,0,gc.canvas.width,gc.canvas.height);
@@ -176,7 +176,7 @@ var gc = init();
 
 var a = []
 for (var i=0; i < vertices.length; i++) {
-    a[i] = Math.random() * (0.001 + 0.001) - 0.001;
+    a[i] = Math.random() * (0.0005 + 0.0005) - 0.0005;
 }
 
 requestAnimationFrame(render);

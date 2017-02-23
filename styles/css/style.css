@@ -26,8 +26,9 @@ body.modal-open .background-container{
 
 #gl {
     position: absolute;
+    top: 30px;
     width: 100vw;
-    height: 100vh;
+    height: 80vh;
     display: block;
     z-index: -1;
 }
