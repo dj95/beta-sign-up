@@ -1,9 +1,9 @@
 {
-  "name": "etdb-subscribe",
+  "name": "@etdb/beta-subscribe",
   "version": "0.0.1",
   "description": "E.T. DB - Spotting the marsians in your app store. Subscribe page",
   "author": "Daniel Jankowski <https://github.com/dj95/>",
-    "contributors": [
+  "contributors": [
     "Daniel Jankowski (https://github.com/dj95/)",
     "Raphael Beer <raphael.beer@protonmail.com> (https://github.com/rbeer/)"
   ],
